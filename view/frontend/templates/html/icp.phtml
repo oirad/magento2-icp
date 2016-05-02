@@ -1,0 +1,17 @@
+<?php
+/**
+ * Icp view template
+ *
+ * @var $block \Oirad\Icp\Block\Icp
+ */
+?>
+<small class="copyright"<?php if($block->getIsHidden()): ?> style="display:none;"<?php endif; ?>>
+    <span>
+        <?php if($src = $block->getIcpIconSrc()): ?>
+            <img src="<?php /* @escapeNotVerified */ echo $src ?>" alt="<?php /* @escapeNotVerified */ echo $block->getIcpText() ?>">
+        <?php endif; ?>
+        <a href="<?php /* @escapeNotVerified */ echo $block->getIcpUrl() ?>" target="_blank">
+            <?php /* @escapeNotVerified */ echo $block->getIcpText() ?>
+        <a/>
+    </span>
+</small>

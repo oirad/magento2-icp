@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+    <system>
+        <section id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="store_information" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="icp_url" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>ICP Number Url</label>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="icp_text" translate="label" type="text" sortOrder="71" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>ICP Number Displayed text</label>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="icp_icon" translate="label comment" type="image" sortOrder="72" showInDefault="1" showInWebsite="1" showInStore="1"> 
+                    <label>Icp Icon</label> 
+                    <comment>Allowed file types: PNG, GIF, JPG, JPEG, SVG. Not all browsers support all these formats!</comment> 
+                    <backend_model>Oirad\Icp\Model\Config\Backend\Image\Icon</backend_model> 
+                    <base_url type="media" scope_info="1">icp</base_url> 
+                </field>
+                <field id="icp_hidden" translate="label comment" type="select" sortOrder="73" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Hide ICP Block?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
